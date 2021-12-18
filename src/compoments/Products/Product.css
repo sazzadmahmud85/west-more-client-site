@@ -1,0 +1,27 @@
+.product{
+    margin: 40px  60px;
+    transition: .6s;
+    padding: 40px 40px;
+    border-radius: 12px;
+    background-color: rgba(255, 235, 205, 0.719);
+}
+.product img{
+width: 100%;
+margin: auto;
+}
+
+.product:hover{
+    background: #ececec;
+    
+    
+}
+.addtobag{
+    background: #13AE92;
+    padding: 6px 12px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+}
+

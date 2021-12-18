@@ -1,0 +1,93 @@
+.bg{
+    height: 85vh;
+    /* background: url('../../img/background.jpg'); */
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.banner-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 185%;
+    border-radius: 10px;
+}
+
+    .banner-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 185%;
+        text-align:left;
+        padding: 0 80px;
+    }
+
+.product-area{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat( 3,1fr);
+}
+
+
+.services{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center
+}
+
+@media only screen and (max-width:688px) {
+    .services {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width:689px) and (max-width:992px){
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.service{
+    width: 80%;
+    background-color: cornsilk;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media only screen and (max-width: 668px){
+        .banner-text{
+            height: auto;
+            padding: 0;
+        }
+        .banner-img{
+            height: auto;
+            margin-top: 50px;
+        }
+        .product-area{
+            grid-template-columns: repeat( 1,1fr);
+        }
+    }
