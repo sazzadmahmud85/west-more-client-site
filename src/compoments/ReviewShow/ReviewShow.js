@@ -19,7 +19,7 @@ const ReviewShow = () => {
 
     return (
         <>
-            <h1 className="text-center my-5">Review</h1>
+            <h1 className="text-center font-weight-bold text-info my-5">REVIEW</h1>
             <div className="review">
                 {reviews?.map(review => <Card style={{ width: '18rem', marginBottom: '40px' }}>
 

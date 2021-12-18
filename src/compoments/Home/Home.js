@@ -25,7 +25,6 @@ const Home = () => {
             <div className="bg">
                 <Container>
                     <Row>
-
                         <Col xs={12} md={6}>
                             <div className="banner-text">
                                 <div>
@@ -53,49 +52,61 @@ const Home = () => {
                     </Row>
                 </Container>
             </div>
-            <h1 className="text-center my-5">Watches</h1>
-            {!isLoading && <div className="product-area">
+            <div className="bg-dark">
+                <br />
+                <br />
+                <h1 className="text-center text-info font-weight-bold">WATCHES</h1>
+                {!isLoading && <div className="product-area">
+                    {
+                        products.map(product => <Products
+                            key={product.id}
+                            product={product}
+                        ></Products>)
+                    }
+
+                </div>}
                 {
-                    products.map(product => <Products
-                        key={product.id}
-                        product={product}
-                    ></Products>)
+                    isLoading &&
+                    <Button variant="primary" disabled>
+                        <Spinner
+                            as="span"
+                            animation="grow"
+                            size="sm"
+                            role="status"
+                            aria-hidden="true"
+                        />
+                        Loading...
+                    </Button>
                 }
+                <hr />
+                <hr />
+                <ReviewShow></ReviewShow>
 
-            </div>}
-            {
-                isLoading &&
-                <Button variant="primary" disabled>
-                    <Spinner
-                        as="span"
-                        animation="grow"
-                        size="sm"
-                        role="status"
-                        aria-hidden="true"
-                    />
-                    Loading...
-                </Button>
-            }
-            <ReviewShow></ReviewShow>
-
-            <div className="services-area">
-                <h1 className="text-center my-5">Services</h1>
-                <div className="services">
-                    <div className="service">
-                        <h4>WATCH COLLECTION</h4>
-                        <p>At Brave, we work for our customers every day to deliver the best mobile applications for any purposes. We work both with individual and corporate customers.</p>
-                    </div>
-                    <div className="service">
-                        <h4>WEBSITES</h4>
-                        <p>Our expert team can design a website of any complexity, from a landing page to a corporate multipage website. Everything depends on what you are looking for.</p>
-                    </div>
-                    <div className="service">
-                        <h4>CONSULTING</h4>
-                        <p>Brave team is glad to provide you with professional IT consulting services 24/7. We have been helping lots of companies since our establishment.</p>
-                    </div>
-                    <div className="service">
-                        <h4>SUPPORT</h4>
-                        <p>n the modern world of rapid web development, internet marketing plays a vital role in your company’s promotion. We are happy to assist you with it.</p>
+                <hr />
+                <hr />
+                <div className="services-area">
+                    <br />
+                    <br />
+                    <h1 className="text-center font-weight-bold text-info">SERVICES</h1>
+                    <br />
+                    <br />
+                    <div className="services">
+                        <div className="service">
+                            <h4>WATCH COLLECTION</h4>
+                            <p>At Brave, we work for our customers every day to deliver the best mobile applications for any purposes. We work both with individual and corporate customers.</p>
+                        </div>
+                        <div className="service">
+                            <h4>WEBSITES</h4>
+                            <p>Our expert team can design a website of any complexity, from a landing page to a corporate multipage website. Everything depends on what you are looking for.</p>
+                        </div>
+                        <div className="service">
+                            <h4>CONSULTING</h4>
+                            <p>Brave team is glad to provide you with professional IT consulting services 24/7. We have been helping lots of companies since our establishment.</p>
+                        </div>
+                        <div className="service">
+                            <h4>SUPPORT</h4>
+                            <p>n the modern world of rapid web development, internet marketing plays a vital role in your company’s promotion. We are happy to assist you with it.</p>
+                        </div>
                     </div>
                 </div>
             </div>

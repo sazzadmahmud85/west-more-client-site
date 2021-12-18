@@ -5,6 +5,8 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className="footer-area">
+            <hr />
+            <hr />
             <Row className="footer">
                 <Col md={4} className="footer-head">
                     <h4> <img src={logo} style={{ width: '2em' }} alt="" /> West More
